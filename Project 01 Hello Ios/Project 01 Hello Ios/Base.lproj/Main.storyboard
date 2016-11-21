@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project_01_Hello_Ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mcU-5f-nCq">
+                                <rect key="frame" x="171" y="131" width="32" height="30"/>
+                                <state key="normal" title="start"/>
+                                <connections>
+                                    <action selector="startGame:" destination="BYZ-38-t0r" eventType="touchUpInside" id="IPB-zb-mZd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YoD-iN-X6j">
+                                <rect key="frame" x="171" y="318" width="31" height="30"/>
+                                <state key="normal" title="确定"/>
+                                <connections>
+                                    <action selector="sureEnter:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Hku-7j-lER"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="输入0-99的数字进行猜测" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YB9-jV-EhI">
+                                <rect key="frame" x="90" y="74" width="195" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MBd-V7-8v9">
+                                <rect key="frame" x="138" y="222" width="97" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="97" id="nDb-rf-qXA"/>
+                                </constraints>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="YB9-jV-EhI" firstAttribute="centerX" secondItem="mcU-5f-nCq" secondAttribute="centerX" id="64l-If-uot"/>
+                            <constraint firstItem="YB9-jV-EhI" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="54" id="K2z-Ie-dPl"/>
+                            <constraint firstItem="mcU-5f-nCq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Lh3-L2-wsP"/>
+                            <constraint firstItem="MBd-V7-8v9" firstAttribute="top" secondItem="mcU-5f-nCq" secondAttribute="bottom" constant="61" id="OaF-eA-b0R"/>
+                            <constraint firstItem="mcU-5f-nCq" firstAttribute="leading" secondItem="YoD-iN-X6j" secondAttribute="leading" id="WuX-28-jUz"/>
+                            <constraint firstItem="YoD-iN-X6j" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="cOT-w8-lOx"/>
+                            <constraint firstItem="mcU-5f-nCq" firstAttribute="centerX" secondItem="MBd-V7-8v9" secondAttribute="centerX" id="gQx-Ha-U3M"/>
+                            <constraint firstItem="mcU-5f-nCq" firstAttribute="top" secondItem="YB9-jV-EhI" secondAttribute="bottom" constant="36" id="wzS-RN-NAb"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="guess" destination="MBd-V7-8v9" id="qak-7l-X2e"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
